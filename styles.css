@@ -1,0 +1,1760 @@
+/* =========================================================
+   ROB & TOM GARDEN IRRIGATION
+   Homepage styles
+   Matched to the new index.html
+   ========================================================= */
+
+
+/* ---------- BASIC RESET ---------- */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #18364a;
+  background: #ffffff;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.wrap {
+  width: min(1180px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   TOP BAR
+   ========================================================= */
+
+.topbar {
+  background: linear-gradient(90deg, #2074c8, #1768b8);
+  color: #ffffff;
+}
+
+.topbar-inner {
+  min-height: 46px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.site-header {
+  position: relative;
+  z-index: 50;
+  background: rgba(255, 255, 255, 0.98);
+  border-bottom: 1px solid #e4edf2;
+}
+
+.nav {
+  min-height: 106px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.brand-drop {
+  font-size: 47px;
+  line-height: 1;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-text strong {
+  color: #136b9f;
+  font-size: 29px;
+  line-height: 1;
+}
+
+.brand-text small {
+  margin-top: 6px;
+  color: #187344;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 3px;
+}
+
+.main-nav {
+  margin-left: auto;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  display: block;
+  padding: 12px 0;
+  color: #173448;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #176fc2;
+}
+
+.nav-links a.active {
+  border-bottom: 2px solid #176fc2;
+}
+
+.menu-btn {
+  display: none;
+  border: 0;
+  padding: 8px;
+  background: transparent;
+  color: #166ca0;
+  font-size: 32px;
+  cursor: pointer;
+}
+
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  border-radius: 999px;
+
+  font-weight: 800;
+  text-align: center;
+
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.header-quote {
+  flex-shrink: 0;
+  padding: 14px 20px;
+
+  background: #1772cf;
+  color: white;
+
+  font-size: 13px;
+
+  box-shadow: 0 6px 18px rgba(23, 114, 207, 0.17);
+}
+
+.btn-primary {
+  min-height: 57px;
+  padding: 0 24px;
+
+  background: #1772cf;
+  color: #ffffff;
+
+  font-size: 16px;
+
+  box-shadow: 0 8px 20px rgba(23, 114, 207, 0.2);
+}
+
+.btn-call {
+  min-height: 57px;
+  padding: 0 24px;
+
+  background: #087844;
+  color: #ffffff;
+
+  font-size: 16px;
+
+  box-shadow: 0 8px 20px rgba(8, 120, 68, 0.18);
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.hero {
+  position: relative;
+  overflow: hidden;
+
+  min-height: 720px;
+
+  background: #ffffff;
+}
+
+
+/*
+   Garden image.
+
+   The page still works before hero-garden.png is uploaded.
+   Until then you will simply see the light fallback background.
+*/
+
+   .hero-equipment {
+  position: absolute;
+  left: 3%;
+  bottom: 18px;
+  width: min(42vw, 620px);
+  height: auto;
+  z-index: 4;
+  object-fit: contain;
+  pointer-events: none;
+}
+.hero-garden {
+  position: absolute;
+
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 41%;
+
+  z-index: 0;
+
+  background-color: #edf7f1;
+
+  background-image:
+    linear-gradient(
+      90deg,
+      #ffffff 0%,
+      rgba(255,255,255,0.97) 6%,
+      rgba(255,255,255,0.78) 18%,
+      rgba(255,255,255,0.28) 35%,
+      rgba(255,255,255,0) 54%
+    ),
+    url("%20hero-garden.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+/*
+   A soft white fade behind the text.
+   This keeps the words readable without making
+   the garden look like a rectangular photograph.
+*/
+
+.hero::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  z-index: 1;
+
+  pointer-events: none;
+
+  background:
+    linear-gradient(
+      90deg,
+      #ffffff 0%,
+      #ffffff 34%,
+      rgba(255,255,255,0.94) 42%,
+      rgba(255,255,255,0.56) 53%,
+      rgba(255,255,255,0) 69%
+    );
+}
+
+.hero-layout {
+  position: relative;
+  z-index: 3;
+
+  min-height: 625px;
+
+  display: flex;
+  align-items: flex-start;
+
+  padding-top: 62px;
+  padding-bottom: 165px;
+}
+
+.hero-content {
+  width: 56%;
+  max-width: 675px;
+}
+
+.eyebrow {
+  margin: 0 0 20px;
+
+  color: #137248;
+
+  font-size: 16px;
+  line-height: 1.6;
+  font-weight: 800;
+
+  letter-spacing: 3px;
+}
+
+.hero h1 {
+  margin: 0;
+
+  font-size: clamp(52px, 5vw, 76px);
+  line-height: 0.98;
+
+  letter-spacing: -3px;
+}
+
+.hero h1 span {
+  display: block;
+}
+
+.hero-green {
+  color: #075c38;
+}
+
+.hero-blue {
+  margin-top: 8px;
+  color: #176cc4;
+}
+
+.hero-description {
+  max-width: 590px;
+
+  margin: 27px 0 0;
+
+  color: #345367;
+
+  font-size: 20px;
+  line-height: 1.55;
+}
+
+.hero-script {
+  margin: 20px 0 0;
+
+  color: #13814e;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-style: italic;
+
+  font-size: 31px;
+  line-height: 1.1;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 12px;
+
+  margin-top: 27px;
+}
+
+
+/* =========================================================
+   IRRIGATION EQUIPMENT
+   ========================================================= */
+
+/*
+   The index already contains the correct image position.
+
+   It is deliberately hidden until we add the real
+   hero-equipment.png file in the next step.
+
+   This prevents a broken-image symbol appearing now.
+*/
+
+.hero-equipment {
+    display: block;
+    position: absolute;
+    z-index: 4;
+    left: 3%;
+    bottom: 18px;
+    width: min(42vw, 620px);
+}
+
+.hero-equipment img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+
+/* =========================================================
+   BENEFITS PANEL
+   ========================================================= */
+
+.benefits-panel {
+  position: absolute;
+
+  z-index: 8;
+
+  left: 50%;
+  bottom: 24px;
+
+  transform: translateX(-50%);
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  background: rgba(255, 255, 255, 0.97);
+
+  border: 1px solid rgba(215, 229, 236, 0.95);
+  border-radius: 23px;
+
+  box-shadow: 0 15px 42px rgba(29, 65, 79, 0.15);
+
+  padding: 22px 15px;
+}
+
+.benefit {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+
+  min-width: 0;
+
+  padding: 9px 18px;
+
+  border-right: 1px solid #dce8ed;
+}
+
+.benefit:last-child {
+  border-right: none;
+}
+
+.benefit-icon {
+  flex-shrink: 0;
+
+  width: 38px;
+
+  font-size: 29px;
+  line-height: 1;
+}
+
+.benefit strong {
+  color: #08633d;
+
+  font-size: 12px;
+
+  letter-spacing: 0.5px;
+}
+
+.benefit p {
+  margin: 7px 0 0;
+
+  color: #536a77;
+
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+
+/* =========================================================
+   INTRO SECTION
+   ========================================================= */
+
+.intro-section {
+  padding: 90px 0;
+}
+
+.section-label {
+  margin: 0;
+
+  color: #157345;
+
+  font-size: 13px;
+  font-weight: 800;
+
+  letter-spacing: 2.5px;
+}
+
+.intro-section h2,
+.technology-section h2,
+.hosepipe-section h2,
+.final-cta h2 {
+  margin: 14px 0 18px;
+
+  color: #073f2b;
+
+  font-size: clamp(35px, 4vw, 50px);
+  line-height: 1.1;
+
+  letter-spacing: -1px;
+}
+
+.section-lead {
+  max-width: 850px;
+
+  margin: 0;
+
+  color: #566c78;
+
+  font-size: 19px;
+  line-height: 1.65;
+}
+
+
+/* =========================================================
+   SERVICE CARDS
+   ========================================================= */
+
+.service-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 22px;
+
+  margin-top: 42px;
+}
+
+.service-card {
+  padding: 30px;
+
+  background: #f5fafb;
+
+  border: 1px solid #e1ecef;
+  border-radius: 21px;
+}
+
+.service-card h3 {
+  margin: 0 0 16px;
+
+  color: #0b6040;
+
+  font-size: 23px;
+}
+
+.service-card p {
+  margin: 0;
+
+  color: #58707c;
+
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+.service-card a {
+  display: inline-block;
+
+  margin-top: 22px;
+
+  color: #176fc2;
+
+  font-weight: 800;
+}
+
+
+/* =========================================================
+   TECHNOLOGY SECTION
+   ========================================================= */
+
+.technology-section {
+  padding: 90px 0;
+
+  background: #eef8f4;
+}
+
+.technology-grid {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+
+  gap: 65px;
+
+  align-items: center;
+}
+
+.technology-section p {
+  color: #536b77;
+
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.feature-list {
+  display: grid;
+  gap: 14px;
+
+  list-style: none;
+
+  margin: 0;
+  padding: 0;
+}
+
+.feature-list li {
+  padding: 18px 20px;
+
+  background: #ffffff;
+
+  border-radius: 15px;
+
+  color: #365864;
+
+  font-weight: 700;
+
+  box-shadow: 0 6px 20px rgba(26, 68, 74, 0.06);
+}
+
+
+/* =========================================================
+   HOSEPIPE SECTION
+   ========================================================= */
+
+.hosepipe-section {
+  padding: 82px 0;
+}
+
+.hosepipe-box {
+  padding: 52px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #e9f7ff,
+      #f1fbf5
+    );
+
+  border-radius: 27px;
+}
+
+.hosepipe-box > div {
+  max-width: 830px;
+}
+
+.hosepipe-box p {
+  color: #526a76;
+
+  font-size: 17px;
+  line-height: 1.65;
+}
+
+.small-note {
+  font-size: 14px !important;
+}
+
+
+/* =========================================================
+   FINAL CTA
+   ========================================================= */
+
+.final-cta {
+  padding: 85px 0;
+
+  background: #073d2a;
+
+  color: #ffffff;
+
+  text-align: center;
+}
+
+.final-cta h2 {
+  color: #ffffff;
+}
+
+.final-cta p {
+  margin: 0;
+
+  color: #d6e9e0;
+
+  font-size: 19px;
+}
+
+.final-actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  gap: 14px;
+
+  margin-top: 28px;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+footer {
+  padding: 40px 0;
+
+  background: #052a20;
+
+  color: #d7e9e1;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+
+  gap: 30px;
+}
+
+footer p {
+  margin: 7px 0;
+}
+
+
+/* =========================================================
+   TABLET / MOBILE
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .wrap {
+    width: calc(100% - 30px);
+  }
+
+
+  /* HEADER */
+
+  .topbar {
+    display: none;
+  }
+
+  .nav {
+    min-height: 104px;
+  }
+
+  .brand-drop {
+    font-size: 42px;
+  }
+
+  .brand-text strong {
+    font-size: 26px;
+  }
+
+  .brand-text small {
+    font-size: 9px;
+    letter-spacing: 2.5px;
+  }
+
+  .header-quote {
+    display: none;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+  .main-nav {
+    margin-left: auto;
+  }
+
+  .nav-links {
+    display: none;
+
+    position: absolute;
+
+    top: 104px;
+    left: 0;
+    right: 0;
+
+    z-index: 100;
+
+    flex-direction: column;
+    align-items: stretch;
+
+    gap: 0;
+
+    padding: 15px 24px 25px;
+
+    background: #ffffff;
+
+    border-top: 1px solid #e8eef1;
+
+    box-shadow: 0 12px 25px rgba(18, 52, 66, 0.12);
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links a {
+    padding: 14px 4px;
+
+    font-size: 17px;
+
+    border-bottom: 1px solid #edf2f4;
+  }
+
+
+  /* =======================================================
+     MOBILE HERO
+
+     Important:
+     hero-garden stays ABSOLUTE.
+
+     Therefore it cannot jump above the text even though
+     the garden div comes before the text in index.html.
+     ======================================================= */
+
+  .hero {
+    min-height: 900px;
+
+    background: #ffffff;
+  }
+
+  .hero-garden {
+    position: absolute;
+
+    top: 400px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    min-height: 500px;
+
+    background-image:
+      linear-gradient(
+        180deg,
+        #ffffff 0%,
+        rgba(255,255,255,0.94) 8%,
+        rgba(255,255,255,0.58) 20%,
+        rgba(255,255,255,0.08) 42%,
+        rgba(255,255,255,0) 58%
+      ),
+      url("%20hero-garden.png");
+
+    background-size: cover;
+    background-position: center;
+  }
+
+  .hero::after {
+    background:
+      linear-gradient(
+        180deg,
+        #ffffff 0%,
+        #ffffff 42%,
+        rgba(255,255,255,0.96) 48%,
+        rgba(255,255,255,0.48) 61%,
+        rgba(255,255,255,0) 75%
+      );
+  }
+
+  .hero-layout {
+    min-height: 760px;
+
+    display: block;
+
+    padding-top: 45px;
+    padding-bottom: 240px;
+  }
+
+  .hero-content {
+    width: 100%;
+    max-width: 640px;
+  }
+
+  .eyebrow {
+    margin-bottom: 18px;
+
+    font-size: 14px;
+    line-height: 1.55;
+
+    letter-spacing: 2.4px;
+  }
+
+  .hero h1 {
+    max-width: 650px;
+
+    font-size: clamp(48px, 10vw, 67px);
+
+    line-height: 0.98;
+
+    letter-spacing: -2px;
+  }
+
+  .hero-blue {
+    margin-top: 8px;
+  }
+
+  .hero-description {
+    max-width: 610px;
+
+    margin-top: 24px;
+
+    font-size: 19px;
+    line-height: 1.55;
+  }
+
+  .hero-script {
+    margin-top: 20px;
+
+    font-size: 32px;
+  }
+
+  .hero-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    max-width: 610px;
+
+    gap: 11px;
+
+    margin-top: 26px;
+  }
+
+  .hero-actions .btn {
+    min-height: 58px;
+
+    padding-left: 16px;
+    padding-right: 16px;
+
+    font-size: 15px;
+  }
+
+
+  /* BENEFITS */
+
+  .benefits-panel {
+    bottom: 18px;
+
+    grid-template-columns: 1fr 1fr;
+
+    padding: 15px;
+
+    border-radius: 20px;
+  }
+
+  .benefit {
+    padding: 15px 12px;
+
+    border-right: none;
+    border-bottom: 1px solid #e0e9ed;
+  }
+
+  .benefit:nth-child(odd) {
+    border-right: 1px solid #e0e9ed;
+  }
+
+  .benefit:nth-last-child(-n + 2) {
+    border-bottom: none;
+  }
+
+
+  /* LOWER PAGE */
+
+  .service-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .technology-grid {
+    grid-template-columns: 1fr;
+
+    gap: 35px;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+  }
+}
+
+
+/* =========================================================
+   SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 560px) {
+
+  .wrap {
+    width: calc(100% - 28px);
+  }
+
+
+  /* HEADER */
+
+  .nav {
+    min-height: 98px;
+  }
+
+  .brand {
+    gap: 8px;
+  }
+
+  .brand-drop {
+    font-size: 38px;
+  }
+
+  .brand-text strong {
+    font-size: 24px;
+  }
+
+  .brand-text small {
+    margin-top: 5px;
+
+    font-size: 8px;
+    letter-spacing: 2.2px;
+  }
+
+  .menu-btn {
+    font-size: 30px;
+  }
+
+  .nav-links {
+    top: 98px;
+  }
+
+
+  /* HERO */
+
+  .hero {
+    min-height: 1030px;
+  }
+
+  .hero-garden {
+    top: 570px;
+
+    min-height: 460px;
+
+    background-position: 60% center;
+  }
+
+  .hero::after {
+    background:
+      linear-gradient(
+        180deg,
+        #ffffff 0%,
+        #ffffff 52%,
+        rgba(255,255,255,0.9) 58%,
+        rgba(255,255,255,0.36) 70%,
+        rgba(255,255,255,0) 82%
+      );
+  }
+
+  .hero-layout {
+    min-height: 860px;
+
+    padding-top: 38px;
+    padding-bottom: 270px;
+  }
+
+  .eyebrow {
+    font-size: 13px;
+
+    letter-spacing: 2px;
+  }
+
+  .hero h1 {
+    font-size: clamp(43px, 12vw, 56px);
+
+    letter-spacing: -1.8px;
+  }
+
+  .hero-description {
+    margin-top: 22px;
+
+    font-size: 18px;
+    line-height: 1.55;
+  }
+
+  .hero-script {
+    margin-top: 19px;
+
+    font-size: 30px;
+  }
+
+  .hero-actions {
+    grid-template-columns: 1fr;
+
+    gap: 10px;
+
+    margin-top: 24px;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+
+    min-height: 59px;
+
+    font-size: 16px;
+  }
+
+
+  /* BENEFITS */
+
+  .benefits-panel {
+    bottom: 14px;
+
+    grid-template-columns: 1fr 1fr;
+
+    padding: 10px;
+  }
+
+  .benefit {
+    display: block;
+
+    padding: 12px 9px;
+  }
+
+  .benefit-icon {
+    margin-bottom: 8px;
+
+    font-size: 25px;
+  }
+
+  .benefit strong {
+    font-size: 11px;
+  }
+
+  .benefit p {
+    margin-top: 5px;
+
+    font-size: 12px;
+    line-height: 1.4;
+  }
+
+
+  /* LOWER SECTIONS */
+
+  .intro-section,
+  .technology-section,
+  .hosepipe-section,
+  .final-cta {
+    padding-top: 62px;
+    padding-bottom: 62px;
+  }
+
+  .intro-section h2,
+  .technology-section h2,
+  .hosepipe-section h2,
+  .final-cta h2 {
+    font-size: 34px;
+  }
+
+  .section-lead {
+    font-size: 18px;
+  }
+
+  .service-card {
+    padding: 25px;
+  }
+
+  .hosepipe-box {
+    padding: 28px 21px;
+  }
+  }
+/* =========================================================
+   FINAL HERO LAYOUT
+   Uses the real hero-garden.png and Hero-equipment.png
+   ========================================================= */
+
+/* Garden */
+.hero-garden {
+    position: absolute !important;
+    z-index: 0 !important;
+
+    background-image: url("hero-garden.png") !important;
+    background-size: contain !important;
+    background-position: right center !important;
+    background-repeat: no-repeat !important;
+    background-color: transparent !important;
+}
+
+/* Keep text/buttons above both images */
+.hero-content {
+    position: relative;
+    z-index: 5 !important;
+}
+
+.hero-actions {
+    position: relative;
+    z-index: 6 !important;
+}
+
+/* Equipment */
+.hero-equipment {
+    position: absolute !important;
+
+    /* nearly same tablet size in both orientations */
+    width: min(520px, 72vw) !important;
+
+    left: 2% !important;
+    bottom: 55px !important;
+
+    /* behind the text/buttons, but above garden */
+    z-index: 2 !important;
+
+    pointer-events: none;
+}
+
+.hero-equipment img {
+    width: 100% !important;
+    height: auto !important;
+    display: block;
+}
+
+/* No artificial white fade over the garden */
+.hero::after {
+    display: none !important;
+}
+
+
+/* =========================
+   LANDSCAPE
+   ========================= */
+@media (orientation: landscape) {
+
+    .hero-garden {
+        top: 0 !important;
+        right: 0 !important;
+        bottom: 0 !important;
+
+        /* allows garden to extend behind
+           Irrigation / Watering Systems */
+        left: 25% !important;
+    }
+
+    .hero-equipment {
+        width: min(520px, 36vw) !important;
+        left: 3% !important;
+        bottom: 55px !important;
+    }
+}
+
+
+/* =========================
+   PORTRAIT
+   ========================= */
+@media (orientation: portrait) {
+
+    .hero-garden {
+        top: 430px !important;
+        right: 0 !important;
+        bottom: 0 !important;
+        left: 0 !important;
+
+        min-height: 520px !important;
+        background-position: right center !important;
+    }
+
+    .hero-equipment {
+        width: min(500px, 68vw) !important;
+        left: 3% !important;
+        bottom: 95px !important;
+    }
+}
+
+
+/* Benefits panel */
+.benefits-panel {
+    bottom: -150px !important;
+    transform: translateX(-50%) !important;
+}
+
+.hero {
+    margin-bottom: 150px;
+}
+@media (orientation: portrait) {
+    .hero-equipment {
+        width: min(430px, 58vw) !important;
+        left: 4% !important;
+        bottom: 55px !important;
+    }
+}
+@media (orientation: portrait) {
+
+    .hero-actions {
+        transform: translateY(45px) !important;
+    }
+
+    .hero-equipment {
+        transform: translateY(45px) !important;
+    }
+}
+/* PORTRAIT - move buttons + equipment further down */
+@media (orientation: portrait) {
+
+    .hero-actions {
+        transform: translateY(100px) !important;
+    }
+
+    .hero-equipment {
+        transform: translateY(120px) !important;
+    }
+}
+/* PORTRAIT - equipment position only */
+@media (orientation: portrait) {
+
+    .hero-equipment {
+        top: 820px !important;
+        bottom: auto !important;
+        transform: none !important;
+    }
+
+}
+/* PORTRAIT - lower the information/benefits bar */
+@media (orientation: portrait) {
+
+    .benefits-panel {
+        bottom: -230px !important;
+    }
+
+    .hero {
+        margin-bottom: 230px !important;
+    }
+}
+/* PORTRAIT - allow lower hero elements to remain visible */
+@media (orientation: portrait) {
+
+    .hero {
+        overflow: visible !important;
+        margin-bottom: 300px !important;
+    }
+
+}
+/* PORTRAIT - move benefits panel lower */
+@media (orientation: portrait) {
+    .benefits-panel {
+        bottom: -300px !important;
+    }
+
+    .hero {
+        margin-bottom: 450px !important;
+    }
+}
+/* LANDSCAPE - closer to preferred hero layout */
+@media (orientation: landscape) {
+
+    .hero-equipment {
+        bottom: 35px !important;
+        left: 3% !important;
+        width: min(580px, 41vw) !important;
+        z-index: 2 !important;
+    }
+
+    .benefits-panel {
+        bottom: -40px !important;
+        z-index: 8 !important;
+    }
+
+    .hero {
+        margin-bottom: 90px !important;
+        overflow: visible !important;
+    }
+
+    .hero-content {
+        position: relative;
+        z-index: 5 !important;
+    }
+
+    .hero h1 {
+        text-shadow:
+            0 0 10px rgba(255,255,255,0.95),
+            0 0 18px rgba(255,255,255,0.85);
+    }
+
+    .hero-description {
+        text-shadow:
+            0 0 8px rgba(255,255,255,0.95),
+            0 0 14px rgba(255,255,255,0.85);
+    }
+}
+/* LANDSCAPE - small text readable without white rectangle */
+@media (orientation: landscape) {
+
+    .hero-description {
+        position: relative;
+        z-index: 6 !important;
+
+        background: none !important;
+        padding: 0 !important;
+
+        color: #344f5c !important;
+
+        text-shadow:
+            -2px -2px 3px rgba(255,255,255,1),
+             2px -2px 3px rgba(255,255,255,1),
+            -2px  2px 3px rgba(255,255,255,1),
+             2px  2px 3px rgba(255,255,255,1),
+             0 0 9px rgba(255,255,255,1),
+             0 0 16px rgba(255,255,255,0.95);
+    }
+}
+/* =========================================
+   SERVICE PAGE COMPARISON + QUOTE
+   ========================================= */
+
+.compare-mobile {
+  display: none;
+}
+
+.compare {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  overflow: hidden;
+  border-radius: 16px;
+  background: #fff;
+}
+
+.compare th,
+.compare td {
+  padding: 16px 18px;
+  text-align: left;
+  border-bottom: 1px solid #dfe9ee;
+}
+
+.compare th {
+  font-weight: 800;
+}
+
+.compare th:nth-child(2) {
+  color: #0b7645;
+  background: #edf8f1;
+}
+
+.compare th:nth-child(3) {
+  color: #176fc2;
+  background: #eef6fd;
+}
+
+.quote-panel {
+  padding: 28px 0 42px;
+}
+
+.quote-panel-inner {
+  background: #eef7fd;
+  border-radius: 22px;
+  padding: 28px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+}
+
+.quote-panel h2 {
+  margin: 0 0 8px;
+}
+
+.quote-panel p {
+  margin: 0;
+}
+
+.quote-button {
+  flex-shrink: 0;
+  min-width: 250px;
+  min-height: 58px;
+}
+
+
+/* MOBILE / NARROW TABLET */
+
+@media (max-width: 700px) {
+
+  .compare-wide {
+    display: none;
+  }
+
+  .compare-mobile {
+    display: grid;
+    gap: 12px;
+  }
+
+  .compare-card {
+    background: #ffffff;
+    border: 1px solid #dfe9ee;
+    border-radius: 14px;
+    padding: 15px 17px;
+    box-shadow: 0 5px 16px rgba(18, 52, 66, 0.05);
+  }
+
+  .compare-card strong {
+    display: block;
+    margin-bottom: 8px;
+    color: #173d50;
+    font-size: 17px;
+  }
+
+  .compare-card span {
+    display: block;
+    margin: 4px 0;
+    line-height: 1.45;
+  }
+
+  .compare-card span:first-of-type b {
+    color: #0b7645;
+  }
+
+  .compare-card span:last-of-type b {
+    color: #176fc2;
+  }
+
+  .quote-panel-inner {
+    display: block;
+    padding: 24px 20px;
+  }
+
+  .quote-button {
+    display: flex;
+    width: 100%;
+    margin-top: 20px;
+    min-width: 0;
+  }
+}
+/* =========================================
+   SIMPLE CONTACT PAGE
+   ========================================= */
+
+.contact-simple {
+  padding: 10px 0 70px;
+}
+
+.contact-simple-item {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  margin: 28px 0;
+}
+
+.contact-icon {
+  width: 72px;
+  height: 72px;
+  flex: 0 0 72px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+  background: #eef7fd;
+
+  color: #1772cf;
+  font-size: 32px;
+}
+
+.contact-simple-item h2 {
+  margin: 0 0 7px;
+  color: #173d50;
+}
+
+.contact-simple-item p {
+  margin: 0;
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+.contact-simple-item a {
+  color: #1772cf;
+  text-decoration: none;
+}
+
+.contact-closing {
+  margin-top: 45px;
+  padding-top: 32px;
+
+  border-top: 1px solid #dce9f0;
+
+  text-align: center;
+}
+
+.contact-closing p {
+  margin: 0 0 16px;
+  font-size: 22px;
+  color: #173d50;
+}
+
+.contact-closing strong {
+  color: #0b7645;
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 600;
+}
+
+@media (max-width: 700px) {
+
+  .contact-simple-item {
+    gap: 16px;
+    align-items: flex-start;
+  }
+
+  .contact-icon {
+    width: 58px;
+    height: 58px;
+    flex-basis: 58px;
+    font-size: 26px;
+  }
+
+  .contact-simple-item p {
+    font-size: 18px;
+  }
+}
+/* =========================================
+   TABLET / MOBILE NAVIGATION FIX
+   ========================================= */
+
+@media (max-width: 900px) {
+
+  /* Keep logo and hamburger neatly on one line */
+  .nav {
+    position: relative;
+    min-height: 90px !important;
+    display: flex;
+    align-items: center;
+  }
+
+  /* Hide navigation links until hamburger is pressed */
+  .nav nav ul {
+    display: none !important;
+
+    position: absolute;
+    top: 90px;
+    left: 0;
+    right: 0;
+
+    margin: 0;
+    padding: 12px 22px 18px;
+
+    list-style: none;
+
+    background: #ffffff;
+    border-top: 1px solid #e8eef1;
+    box-shadow: 0 12px 25px rgba(18, 52, 66, 0.12);
+
+    z-index: 100;
+  }
+
+  /* Show menu after hamburger is pressed */
+  .nav nav ul.open {
+    display: flex !important;
+    flex-direction: column;
+  }
+
+  .nav nav ul li {
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav nav ul a {
+    display: block;
+    padding: 13px 4px;
+
+    font-size: 17px;
+    text-decoration: none;
+
+    border-bottom: 1px solid #edf2f4;
+  }
+
+  /* Hamburger */
+  .menu-btn {
+    display: block !important;
+    font-size: 30px;
+    cursor: pointer;
+  }
+
+  /* Hide the separate header Free Quote button on small screens */
+  .nav > .btn.btn-primary {
+    display: none !important;
+  }
+}
+/* =========================================================
+   ABOUT ROB & TOM - HOMEPAGE
+   ========================================================= */
+
+.about-home {
+    padding: 80px 0;
+    background: #ffffff;
+}
+
+.about-home-inner {
+    max-width: 1050px;
+    margin: 0 auto;
+}
+
+.about-home-heading {
+    margin-bottom: 28px;
+}
+
+.about-home-heading .eyebrow {
+    color: #08764f;
+    font-weight: 800;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+}
+
+.about-home-heading h2 {
+    margin: 0;
+    color: #173f50;
+    font-size: clamp(30px, 4vw, 44px);
+    line-height: 1.15;
+}
+
+.about-home-text {
+    max-width: 900px;
+}
+
+.about-home-text p {
+    color: #405965;
+    font-size: 18px;
+    line-height: 1.7;
+    margin: 0 0 20px;
+}
+
+.about-home-tagline {
+    display: block;
+    margin-top: 30px;
+    color: #168454;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 27px;
+    line-height: 1.25;
+    font-style: italic;
+    font-weight: 600;
+}
+
+/* About section - tablet and mobile */
+@media (max-width: 768px) {
+    .about-home {
+        padding: 55px 0;
+    }
+
+    .about-home-heading {
+        margin-bottom: 22px;
+    }
+
+    .about-home-heading h2 {
+        font-size: 30px;
+    }
+
+    .about-home-text p {
+        font-size: 17px;
+        line-height: 1.6;
+    }
+
+    .about-home-tagline {
+        margin-top: 25px;
+        font-size: 24px;
+    }
+}
+/* Reduce gap above About section */
+.about-home {
+    padding-top: 45px;
+}
