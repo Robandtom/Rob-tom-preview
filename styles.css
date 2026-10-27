@@ -1758,3 +1758,32 @@ footer p {
 .about-home {
     padding-top: 45px;
 }
+
+/* =========================================================
+   APPROVED PREVIEW: portrait spacing and blue intro statement
+   27 October 2026. Desktop and landscape are unchanged.
+   ========================================================= */
+.intro-statement {
+  color: #1675cf;
+  font-family: Georgia, "Times New Roman", serif;
+  font-style: italic;
+  font-size: clamp(24px, 3.2vw, 34px);
+  line-height: 1.2;
+  margin: 0 0 42px;
+  max-width: 1080px;
+}
+.areas-we-cover p + p { margin-top: 12px; }
+@media (orientation: portrait) {
+  /* Put the two CTAs lower, within the garden photograph. */
+  .hero-actions { transform: translateY(230px) !important; }
+  /* Close the excessive white gap after the four benefits. */
+  .hero { margin-bottom: 335px !important; }
+  .intro-section { padding-top: 32px !important; }
+  /* Leave deliberate breathing room below the blue statement. */
+  .intro-statement { margin-bottom: 42px; }
+}
+@media (orientation: portrait) and (max-width: 700px) {
+  .hero-actions { transform: translateY(160px) !important; }
+  .hero { margin-bottom: 330px !important; }
+  .intro-statement { font-size: 24px; }
+}
