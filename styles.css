@@ -1787,3 +1787,24 @@ footer p {
   .hero { margin-bottom: 330px !important; }
   .intro-statement { font-size: 24px; }
 }
+
+/* Approved mobile refinement: 27 Oct 2026 */
+@media (orientation: portrait) {
+  /* Lower both hero buttons further without affecting landscape. */
+  .hero-actions { transform: translateY(315px) !important; }
+  /* Keep benefits cleanly integrated into the white page. */
+  .benefits-panel {
+    background: #fff !important;
+    border: 0 !important;
+    box-shadow: none !important;
+  }
+  /* A little less white space after the benefits. */
+  .hero { margin-bottom: 305px !important; }
+  .intro-section { padding-top: 20px !important; }
+  /* Match the approved design: modest gap before green eyebrow. */
+  .intro-statement { margin-bottom: 24px !important; }
+}
+@media (orientation: portrait) and (max-width: 700px) {
+  .hero-actions { transform: translateY(245px) !important; }
+  .hero { margin-bottom: 300px !important; }
+}
