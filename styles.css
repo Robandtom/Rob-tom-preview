@@ -1902,3 +1902,21 @@ footer p {
   .benefits-panel { padding: 8px 0 !important; }
   .benefit { padding: 8px 7px !important; gap: 7px; }
 }
+
+/* 28 Oct 2026 — phone portrait only: keep full equipment collage above benefits.
+   Tablet portrait, landscape and desktop remain unchanged. */
+@media screen and (max-width: 560px) and (orientation: portrait) {
+  .hero-equipment {
+    top: 750px !important;
+    bottom: auto !important;
+    left: 4% !important;
+    width: min(360px, 88vw) !important;
+    transform: none !important;
+  }
+  .hero-equipment img {
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+    object-fit: contain !important;
+  }
+}
