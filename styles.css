@@ -1907,9 +1907,9 @@ footer p {
    Tablet portrait, landscape and desktop remain unchanged. */
 @media screen and (max-width: 560px) and (orientation: portrait) {
   .hero-equipment {
-    top: 785px !important;
+    top: 750px !important;
     bottom: auto !important;
-    left: 43% !important;
+    left: 50% !important;
     width: min(270px, 66vw) !important;
     transform: translateX(-50%) !important;
   }
@@ -1918,14 +1918,5 @@ footer p {
     width: 100% !important;
     height: auto !important;
     object-fit: contain !important;
-  }
-}
-
-/* 28 Oct: phone portrait ONLY — move collage 30px down and 18px left.
-   No change to its size, images, tablet or landscape. */
-@media screen and (max-width: 560px) and (orientation: portrait) {
-  .hero .hero-equipment {
-    top: 815px !important;
-    left: calc(43% - 18px) !important;
   }
 }
