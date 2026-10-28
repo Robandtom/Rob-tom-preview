@@ -1927,3 +1927,26 @@ footer p {
   }
   .hero { margin-bottom: 175px !important; }
 }
+
+
+/* 28 Oct: phone portrait equipment must overlap IN FRONT of benefits.
+   Override old portrait top:820px and competing bottom offsets. */
+@media screen and (max-width: 560px) and (orientation: portrait) {
+  .hero { overflow: visible !important; isolation: auto !important; margin-bottom: 185px !important; }
+  .hero-equipment {
+    position: absolute !important;
+    top: auto !important;
+    bottom: -68px !important;
+    left: 1% !important;
+    width: min(430px, 58vw) !important;
+    transform: none !important;
+    z-index: 50 !important;
+    overflow: visible !important;
+  }
+  .hero-equipment img { display: block !important; width: 100% !important; height: auto !important; object-fit: contain !important; }
+  .benefits-panel {
+    bottom: -165px !important;
+    z-index: 10 !important;
+    padding-top: 82px !important;
+  }
+}
