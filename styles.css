@@ -1951,35 +1951,19 @@ footer p {
   }
 }
 
-/* 28 Oct — phone portrait only: keep the equipment ABOVE the benefits panel.
-   The hero and benefits are siblings: raising only the equipment z-index
-   cannot fix stacking if the entire hero is behind the benefits. */
+/* 28 Oct — phone portrait: equipment above benefits, no clipping.
+   Scoped to narrow portrait phones; all other layouts remain untouched. */
 @media screen and (max-width: 560px) and (orientation: portrait) {
-  .hero {
-    position: relative !important;
-    z-index: 20 !important;
-    overflow: visible !important;
-    isolation: auto !important;
-    margin-bottom: 185px !important;
-  }
+  .hero { position: relative !important; overflow: visible !important; isolation: isolate !important; }
   .hero-equipment {
-    position: absolute !important;
-    top: auto !important;
-    bottom: -105px !important;
-    left: 1% !important;
-    width: min(430px, 58vw) !important;
-    transform: none !important;
-    z-index: 100 !important;
-    pointer-events: none !important;
+    position: absolute !important; top: auto !important; bottom: -68px !important;
+    left: 1% !important; width: min(430px, 58vw) !important;
+    transform: none !important; z-index: 100 !important;
+    visibility: visible !important; overflow: visible !important;
   }
-  .hero-equipment img {
-    width: 100% !important;
-    height: auto !important;
-    object-fit: contain !important;
-  }
+  .hero-equipment img { display: block !important; width: 100% !important; height: auto !important; object-fit: contain !important; }
   .benefits-panel {
-    z-index: 1 !important;
-    bottom: -165px !important;
-    padding-top: 82px !important;
+    z-index: 1 !important; bottom: -165px !important;
+    padding-top: 105px !important;
   }
 }
