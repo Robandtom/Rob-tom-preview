@@ -1909,9 +1909,9 @@ footer p {
   .hero-equipment {
     top: 750px !important;
     bottom: auto !important;
-    left: 4% !important;
-    width: min(360px, 88vw) !important;
-    transform: none !important;
+    left: 50% !important;
+    width: min(270px, 66vw) !important;
+    transform: translateX(-50%) !important;
   }
   .hero-equipment img {
     display: block !important;
