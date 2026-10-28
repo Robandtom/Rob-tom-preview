@@ -1948,3 +1948,17 @@ footer p {
     z-index: 9;
   }
 }
+
+/* 28 Oct — phone portrait: equipment sits ABOVE the benefits panel,
+   with sufficient clear space before the benefit icons and text. */
+@media screen and (max-width: 560px) and (orientation: portrait) {
+  .hero { overflow: visible !important; }
+  .hero .hero-equipment {
+    top: 775px !important;
+    z-index: 30 !important;
+  }
+  .hero .benefits-panel {
+    z-index: 8 !important;
+    padding-top: 100px !important;
+  }
+}
